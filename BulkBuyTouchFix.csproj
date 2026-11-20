@@ -2,11 +2,9 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>BulkBuyTouchFix</AssemblyName>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Stardew Valley"><HintPath>./libs/Stardew Valley.dll</HintPath></Reference>
-    <Reference Include="SMAPI"><HintPath>./libs/SMAPI.dll</HintPath></Reference>
-    <Reference Include="0Harmony"><HintPath>./libs/0Harmony.dll</HintPath></Reference>
-    <Reference Include="MonoGame.Framework"><HintPath>./libs/MonoGame.Framework.dll</HintPath></Reference>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
   </ItemGroup>
 </Project>
