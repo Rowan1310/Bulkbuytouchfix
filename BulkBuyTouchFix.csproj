@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>BulkBuyTouchFix</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Stardew Valley"><HintPath>./libs/Stardew Valley.dll</HintPath></Reference>
+    <Reference Include="SMAPI"><HintPath>./libs/SMAPI.dll</HintPath></Reference>
+    <Reference Include="0Harmony"><HintPath>./libs/0Harmony.dll</HintPath></Reference>
+    <Reference Include="MonoGame.Framework"><HintPath>./libs/MonoGame.Framework.dll</HintPath></Reference>
+  </ItemGroup>
+</Project>
