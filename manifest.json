@@ -1,0 +1,11 @@
+{
+  "Name": "Bulk Buy Touch Fix",
+  "Author": "Wawan",
+  "Version": "1.0.1",
+  "Description": "Bulk buy di semua toko, tombol gede buat touch Android",
+  "UniqueID": "Wawan.BulkBuyTouchFix",
+  "EntryDll": "BulkBuyTouchFix.dll",
+  "MinimumApiVersion": "4.3.0",
+  "MinimumGameVersion": "1.6.15",
+  "UpdateKeys": []
+}
