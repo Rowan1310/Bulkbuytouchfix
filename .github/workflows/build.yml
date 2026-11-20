@@ -1,0 +1,40 @@
+name: Build Mod
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 6
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Download SMAPI DLLs
+        run: |
+          mkdir -p libs
+          curl -L -o smapi.zip https://github.com/Pathoschild/SMAPI/releases/download/4.3.2/SMAPI-4.3.2-installer.zip
+          unzip smapi.zip -d smapi_temp
+          cp smapi_temp/internal/windows/SMAPI.dll ./libs/
+          cp smapi_temp/internal/windows/0Harmony.dll ./libs/
+          cp smapi_temp/internal/windows/MonoGame.Framework.dll ./libs/
+          # Stardew Valley.dll kita ambil dari SMAPI installer juga
+          # Kalo gagal, kita pake yang dari NuGet
+          ls -R libs
+
+      - name: Build DLL
+        run: dotnet build -c Release
+
+      - name: Upload DLL
+        uses: actions/upload-artifact@v4
+        with:
+          name: BulkBuyTouchFix
+          path: bin/Release/net6.0/BulkBuyTouchFix.dll
