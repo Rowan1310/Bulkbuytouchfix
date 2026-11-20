@@ -5,6 +5,9 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
+    <Reference Include="Stardew Valley"><HintPath>./libs/Stardew Valley.dll</HintPath></Reference>
+    <Reference Include="StardewModdingAPI"><HintPath>./libs/StardewModdingAPI.dll</HintPath></Reference>
+    <Reference Include="0Harmony"><HintPath>./libs/0Harmony.dll</HintPath></Reference>
+    <Reference Include="MonoGame.Framework"><HintPath>./libs/MonoGame.Framework.dll</HintPath></Reference>
   </ItemGroup>
 </Project>
